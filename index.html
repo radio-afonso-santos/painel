@@ -1,16 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <title>Painel - Rádio Afonso Santos</title>
   </head>
   <body>
-    <h1 class="bg-primary text-white">Teste</h1>
+    <!-- NAVBAR -->
+    <nav class="black">
+      <div class="nav-wrapper container">
+        <a href="#!" class="brand-logo">Rádio Afonso Santos</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a href="/"><i class="material-icons left">dashboard</i> Visão Geral</a>
+          </li>
+          <li>
+            <a href="/pedidos"><i class="material-icons left">skip_next</i> Fila de Pedidos</a>
+          </li>
+          <li>
+            <a href="/logout"><i class="material-icons">exit_to_app</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/">Visão Geral</a></li>
+      <li><a href="/pedidos">Components</a></li>
+      <li><a href="/logout">Terminar Sessão</a></li>
+    </ul>
+
+    <!-- ESTATÍSTICAS -->
+    <!-- OUVINTES -->
+
+    <div class="container">
+      <div class="row">
+        <h3>Visão Geral</h3>
+        <div class="col s12 m12 l6">
+          <div class="card-panel light-blue darken-1">
+            <div class="card-content white-text">
+              <div class="row">
+                <div class="col s2">
+                  <i class="material-icons md-48">person</i>
+                </div>
+                <div class="col s10 right-align">
+                  <h5><span id="numero_ouvintes" class="bold"></span> <span id="palavra_ouvintes"></span></h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l6">
+          <div class="card-panel red darken-1">
+            <div class="card-content white-text">
+              <div class="row">
+                <div class="col s2">
+                  <i class="material-icons md-48">music_note</i>
+                </div>
+                <div class="col s10 right-align linha">
+                  <h5>
+                    <span id="musica" class="bold"></span>
+                  </h5>
+                  <h6>
+                    <span id="artista"></span>
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/NchanSubscriber.js"></script>
+    <script src="js/now_playing.js"></script>
   </body>
 </html>
